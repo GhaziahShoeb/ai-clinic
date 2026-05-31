@@ -3,6 +3,7 @@ from jose import JWTError, jwt
 from datetime import datetime, timedelta, timezone
 from dotenv import load_dotenv
 import os
+from models.user import User
 
 load_dotenv()
 
@@ -28,3 +29,25 @@ def decode_token(token: str) -> str:
         return payload.get("sub")
     except JWTError:
         return None
+    
+from fastapi import Depends,HTTPException, status
+from fastapi.security import OAuth2PasswordBearer
+from sqlalchemy.orm import Session
+from database import get_db
+
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/auth/login")
+
+def get_current_user(token:str = Depends(oauth2_scheme), db: Session = Depends(get_db)):
+    email = decode_token(token)
+    if not email:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Invalid or expired token",
+            
+        )
+    
+    user = db.query(User).filter(User.email == email).first()
+    if not user:
+        raise HTTPException(status_code = 404,detail = "User not found")
+    return user
+        

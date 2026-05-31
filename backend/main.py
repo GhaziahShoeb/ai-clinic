@@ -1,10 +1,16 @@
+from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from database import engine, Base
 from models import user, patient, appointment
-from routers import auth
+from routers import auth, patients, admin, doctors
 
-app = FastAPI(title="AI Clinic API")
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    Base.metadata.create_all(bind=engine)
+    yield
+
+app = FastAPI(title="AI Clinic API", lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,
@@ -13,13 +19,13 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-app.include_router(auth.router)
-
-@app.on_event("startup")
-def create_tables():
-    Base.metadata.create_all(bind=engine)
 
 @app.get("/")
 def root():
     return {"message": "AI Clinic API is running"}
+
+app.include_router(auth.router)
+app.include_router(patients.router)
+app.include_router(doctors.router)
+app.include_router(admin.router)
 
