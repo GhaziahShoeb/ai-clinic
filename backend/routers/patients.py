@@ -5,6 +5,9 @@ from models.user import User, UserRole
 from models.patient import Patient
 from schemas.patient import PatientCreate, PatientOut
 from core.security import get_current_user
+from models.user import User, UserRole
+from models.patient import Patient
+from sqlalchemy.orm import Session
 
 router = APIRouter(prefix="/patients", tags=["patients"])
 
@@ -23,7 +26,7 @@ def create_patient(
 ):
     if current_user.role != UserRole.admin:
         raise HTTPException(status_code=403, detail="Only admins can create patients")
-    patient = Patient(**data.dict(), user_id=current_user.id)
+    patient = Patient(**data.dict())  # user_id comes from data now
     db.add(patient)
     db.commit()
     db.refresh(patient)

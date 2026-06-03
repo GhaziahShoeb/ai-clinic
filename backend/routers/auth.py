@@ -5,6 +5,8 @@ from database import get_db
 from schemas.user import UserCreate, UserOut
 from services.auth_service import create_user, get_user_by_email, login_user
 from pydantic import BaseModel
+from core.security import get_current_user
+from models.user import User
 
 router = APIRouter(prefix="/auth", tags=["auth"])
 
@@ -30,3 +32,7 @@ def login(
     if not result:
         raise HTTPException(status_code=401, detail="Invalid email or password")
     return result
+
+@router.get("/me",response_model=UserOut)
+def get_me(current_user: User =Depends(get_current_user)):
+    return current_user

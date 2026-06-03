@@ -32,4 +32,4 @@ def get_db():
     try:
         yield db        # route uses the session here
     finally:
-        db.close()      # always close, even if an error happened
+        db.close()      # always close, even if an error happened¸
