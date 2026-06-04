@@ -3,7 +3,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from database import engine, Base
 from models import user, patient, appointment
-from routers import auth, patients, admin, doctors
+from routers import auth, patients, admin, doctors, ai
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -28,4 +28,5 @@ app.include_router(auth.router)
 app.include_router(patients.router)
 app.include_router(doctors.router)
 app.include_router(admin.router)
+app.include_router(ai.router)
 
