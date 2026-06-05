@@ -10,9 +10,11 @@ function DoctorDashboard() {
   const [question, setQuestion] = useState('')
   const [answer, setAnswer] = useState('')
   const [asking, setAsking] = useState(false)
+  const [summary, setSummary] = useState('')
+  const [summarizing, setSummarizing] = useState(false)
   const navigate = useNavigate()
   const currentUser = getUser()
-
+  
   useEffect(() => {
     const fetchPatients = async () => {
       try {
@@ -59,6 +61,18 @@ function DoctorDashboard() {
       setAsking(false)
     }
   }
+  const handleSummary = async () => {
+  setSummarizing(true)
+  setSummary('')
+  try {
+    const response = await api.get(`/ai/summary/${selectedPatient.id}`)
+    setSummary(response.data.summary)
+  } catch (err) {
+    setSummary('Error generating summary.')
+  } finally {
+    setSummarizing(false)
+  }
+}
 
   return (
     <div className="min-h-screen bg-gray-100">
@@ -136,11 +150,27 @@ function DoctorDashboard() {
                   </button>
                 </div>
                 {answer && (
-                  <div className="mt-4 bg-blue-50 border border-blue-200 rounded p-4">
-                    <p className="text-sm font-medium text-blue-700 mb-1">AI Answer:</p>
-                    <p className="text-gray-700">{answer}</p>
-                  </div>
-                )}
+  <div className="mt-4 bg-blue-50 border border-blue-200 rounded p-4">
+    <p className="text-sm font-medium text-blue-700 mb-1">AI Answer:</p>
+    <p className="text-gray-700">{answer}</p>
+  </div>
+)}
+
+<button
+  onClick={handleSummary}
+  disabled={summarizing}
+  className="mt-3 w-full bg-green-600 text-white p-3 rounded font-semibold hover:bg-green-700 disabled:opacity-50"
+>
+  {summarizing ? 'Generating Summary...' : '📋 Generate Patient Summary'}
+</button>
+
+{summary && (
+  <div className="mt-4 bg-green-50 border border-green-200 rounded p-4">
+    <p className="text-sm font-medium text-green-700 mb-1">Patient Summary:</p>
+    <p className="text-gray-700 whitespace-pre-line">{summary}</p>
+  </div>
+)}
+                
               </div>
             </div>
           )}

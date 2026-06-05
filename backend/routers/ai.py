@@ -54,3 +54,18 @@ def ask_question(
 
     answer = ask_about_patient(patient_id, request.question)
     return {"answer": answer}
+
+from services.ai_service import ask_about_patient, generate_patient_summary
+
+# GET /ai/summary/{patient_id} — generate patient summary
+@router.get("/summary/{patient_id}")
+def get_patient_summary(
+    patient_id: int,
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user)
+):
+    if current_user.role not in [UserRole.doctor, UserRole.admin]:
+        raise HTTPException(status_code=403, detail="Not authorized")
+    
+    summary = generate_patient_summary(patient_id)
+    return {"summary": summary}

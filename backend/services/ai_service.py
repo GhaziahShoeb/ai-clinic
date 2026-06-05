@@ -45,3 +45,32 @@ Answer based only on the patient record above:""")
     response = llm.invoke(messages)
     return response.content
 
+def generate_patient_summary(patient_id: int) -> str:
+    """
+    Generate a one-click AI summary of a patient's record
+    covering: chief complaint, conditions, medications, allergies, recent notes
+    """
+    relevant_chunks = search_similar(patient_id, "patient summary conditions medications allergies notes", n_results=3)
+
+    if not relevant_chunks:
+        return "No patient records found. Please embed the patient record first."
+
+    context = "\n\n".join(relevant_chunks)
+
+    messages = [
+        SystemMessage(content="""You are a clinical assistant. Generate a concise 
+        structured summary of the patient record. Include:
+        - Conditions
+        - Current medications
+        - Known allergies
+        - Key clinical notes
+        Be brief and clinical."""),
+
+        HumanMessage(content=f"""Patient Record:
+{context}
+
+Generate a structured clinical summary:""")
+    ]
+
+    response = llm.invoke(messages)
+    return response.content
