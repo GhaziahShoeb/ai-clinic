@@ -2,6 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from dotenv import load_dotenv
+from sqlalchemy.pool import NullPool
 import os
 
 # Load variables from your .env file into the environment
@@ -12,7 +13,7 @@ DATABASE_URL = os.getenv("DATABASE_URL")
 
 # Create the connection to the database
 # This is the actual "door" to your PostgreSQL on Neon
-engine = create_engine(DATABASE_URL)
+engine = create_engine(DATABASE_URL,poolclass=NullPool)
 
 # SessionLocal is a factory that creates database sessions
 # Each session = one conversation with the database (read/write)
