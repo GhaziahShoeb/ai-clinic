@@ -3,7 +3,7 @@ import chromadb
 import os
 
 # Load Bio_ClinicalBERT model
-model = SentenceTransformer('emilyalsentzer/Bio_ClinicalBERT')
+model = SentenceTransformer('all-MiniLM-L6-v2')
 
 # Create ChromaDB client
 chroma_client = chromadb.PersistentClient(path="./chroma_db")
