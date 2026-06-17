@@ -13,7 +13,7 @@ DATABASE_URL = os.getenv("DATABASE_URL")
 
 # Create the connection to the database
 # This is the actual "door" to your PostgreSQL on Neon
-engine = create_engine(DATABASE_URL,poolclass=NullPool)
+engine = create_engine(DATABASE_URL,poolclass=NullPool,connect_args={"sslmode": "require"})
 
 # SessionLocal is a factory that creates database sessions
 # Each session = one conversation with the database (read/write)
