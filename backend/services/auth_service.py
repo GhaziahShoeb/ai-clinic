@@ -17,9 +17,14 @@ def create_user(db: Session, user_data: UserCreate):
     db.refresh(new_user)  # get the auto-generated id back
     return new_user
 
+from sqlalchemy import func
+
 # finds a user by email
 def get_user_by_email(db: Session, email: str):
-    return db.query(User).filter(User.email == email).first()
+    if not email:
+        return None
+    cleaned_email = email.strip().lower()
+    return db.query(User).filter(func.lower(User.email) == cleaned_email).first()
 
 # verifies login and returns a JWT token
 def login_user(db: Session, email: str, password: str):

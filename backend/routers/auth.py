@@ -34,19 +34,36 @@ async def login(
     * Form‑encoded (OAuth2 style): username=...&password=...
     """
     content_type = request.headers.get("content-type", "")
+    email = None
+    pwd = None
+
     if "application/json" in content_type:
         body = await request.json()
-        email = body.get("email")
+        email = body.get("email") or body.get("username")
         pwd = body.get("password")
-    elif "application/x-www-form-urlencoded" in content_type:
+    elif "application/x-www-form-urlencoded" in content_type or "multipart/form-data" in content_type:
         form = await request.form()
-        email = form.get("username")
+        email = form.get("username") or form.get("email")
         pwd = form.get("password")
     else:
-        raise HTTPException(
-            status_code=415,
-            detail="Unsupported Content-Type. Use JSON or form data."
-        )
+        # Fallback to try form or JSON parsing
+        try:
+            form = await request.form()
+            email = form.get("username") or form.get("email")
+            pwd = form.get("password")
+        except Exception:
+            try:
+                body = await request.json()
+                email = body.get("email") or body.get("username")
+                pwd = body.get("password")
+            except Exception:
+                raise HTTPException(
+                    status_code=415,
+                    detail="Unsupported Content-Type. Use JSON or form data."
+                )
+
+    if email:
+        email = str(email).strip()
     if not email or not pwd:
         raise HTTPException(status_code=401, detail="Invalid email or password")
     result = login_user(db, email, pwd)
