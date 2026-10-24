@@ -5,14 +5,10 @@ from groq import Groq
 chroma_client = chromadb.PersistentClient(path="./chroma_db")
 collection = chroma_client.get_or_create_collection(name="patient_records")
 
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
-
 def get_embedding(text: str):
-    # use a simple hash-based approach for now
-    # Groq doesn't have embeddings API yet, so we use a lightweight approach
     words = text.lower().split()
-    vector = [hash(word) % 1000 / 1000.0 for word in words[:384]]
-    vector += [0.0] * (384 - len(vector))
+    vector = [hash(word) % 1000 / 1000.0 for word in words[:768]]
+    vector += [0.0] * (768 - len(vector))
     return vector
 
 def embed_patient(patient_id: int, text: str):
