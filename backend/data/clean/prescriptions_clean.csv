@@ -1,0 +1,81 @@
+prescription_id,appointment_id,patient_id,medication_name,dosage,frequency,instructions
+1,2,98,Atorvastatin,20mg,At bedtime,Take as directed with water
+2,3,82,Paracetamol,650mg,Every 6 hours if fever,Take as directed with water
+3,5,37,Amoxicillin,Standard Dosage,Twice daily,Take as directed with water
+4,7,25,Metformin,850mg,Once daily with meal,Take as directed with water
+5,8,71,Omeprazole,Standard Dosage,Before breakfast,Take as directed with water
+6,9,91,Amoxicillin,500mg,Twice daily,Take as directed with water
+7,16,74,Ibuprofen,400mg,After food,Take as directed with water
+8,17,50,Paracetamol,650mg,Every 6 hours if fever,Take as directed with water
+9,18,13,Amlodipine,5mg,Once daily morning,Take as directed with water
+10,23,57,Paracetamol,650mg,Every 6 hours if fever,Take as directed with water
+11,24,38,Paracetamol,650mg,Every 6 hours if fever,Take as directed with water
+12,26,30,Paracetamol,650mg,Every 6 hours if fever,Take as directed with water
+14,33,81,Omeprazole,20mg,Before breakfast,Take as directed with water
+15,34,12,Paracetamol,650mg,Every 6 hours if fever,Take as directed with water
+16,35,70,Albuterol Inhaler,90mcg,As needed for wheezing,Take as directed with water
+17,37,87,Atorvastatin,20mg,At bedtime,Take as directed with water
+18,41,82,Paracetamol,650mg,Every 6 hours if fever,Take as directed with water
+19,42,5,Albuterol Inhaler,90mcg,As needed for wheezing,Take as directed with water
+20,45,28,Omeprazole,20mg,Before breakfast,Take as directed with water
+21,47,85,Albuterol Inhaler,90mcg,As needed for wheezing,Take as directed with water
+22,50,23,Metformin,850mg,Once daily with meal,Take as directed with water
+23,51,76,Paracetamol,650mg,Every 6 hours if fever,Take as directed with water
+24,52,68,Amoxicillin,500mg,Twice daily,Take as directed with water
+25,55,10,Metformin,850mg,Once daily with meal,Take as directed with water
+26,56,80,Amoxicillin,500mg,Twice daily,Take as directed with water
+27,60,41,Amoxicillin,500mg,Twice daily,Take as directed with water
+28,61,12,Amoxicillin,500mg,Twice daily,Take as directed with water
+29,65,29,Albuterol Inhaler,90mcg,As needed for wheezing,Take as directed with water
+30,66,55,Amoxicillin,500mg,Twice daily,Take as directed with water
+31,67,90,Atorvastatin,20mg,At bedtime,Take as directed with water
+32,71,7,Omeprazole,20mg,Before breakfast,Take as directed with water
+33,72,63,Omeprazole,20mg,Before breakfast,Take as directed with water
+34,73,56,Amlodipine,5mg,Once daily morning,Take as directed with water
+35,76,23,Paracetamol,650mg,Every 6 hours if fever,Take as directed with water
+36,78,74,Amoxicillin,500mg,Twice daily,Take as directed with water
+37,79,42,Amlodipine,5mg,Once daily morning,Take as directed with water
+38,81,96,Paracetamol,650mg,Every 6 hours if fever,Take as directed with water
+39,82,100,Amoxicillin,500mg,Twice daily,Take as directed with water
+40,90,65,Omeprazole,20mg,Before breakfast,Take as directed with water
+41,92,47,Paracetamol,650mg,Every 6 hours if fever,Take as directed with water
+42,93,9,Paracetamol,650mg,Every 6 hours if fever,Take as directed with water
+44,97,3,Albuterol Inhaler,90mcg,As needed for wheezing,Take as directed with water
+45,98,29,Amlodipine,5mg,Once daily morning,Take as directed with water
+46,105,92,Paracetamol,650mg,Every 6 hours if fever,Take as directed with water
+47,106,58,Amlodipine,5mg,Once daily morning,Take as directed with water
+48,108,31,Atorvastatin,20mg,At bedtime,Take as directed with water
+49,109,92,Metformin,850mg,Once daily with meal,Take as directed with water
+50,114,81,Albuterol Inhaler,90mcg,As needed for wheezing,Take as directed with water
+51,117,82,Paracetamol,650mg,Every 6 hours if fever,Take as directed with water
+52,118,31,Amoxicillin,500mg,Twice daily,Take as directed with water
+53,121,6,Albuterol Inhaler,90mcg,As needed for wheezing,Take as directed with water
+54,122,33,Omeprazole,20mg,Before breakfast,Take as directed with water
+55,124,50,Amoxicillin,500mg,Twice daily,Take as directed with water
+56,126,42,Albuterol Inhaler,90mcg,As needed for wheezing,Take as directed with water
+58,131,78,Albuterol Inhaler,90mcg,As needed for wheezing,Take as directed with water
+59,132,74,Albuterol Inhaler,90mcg,As needed for wheezing,Take as directed with water
+60,135,89,Atorvastatin,20mg,At bedtime,Take as directed with water
+61,137,91,Omeprazole,20mg,Before breakfast,Take as directed with water
+62,138,66,Omeprazole,20mg,Before breakfast,Take as directed with water
+63,141,68,Ibuprofen,400mg,After food,Take as directed with water
+64,144,39,Ibuprofen,400mg,After food,Take as directed with water
+65,146,79,Omeprazole,20mg,Before breakfast,Take as directed with water
+66,153,31,Paracetamol,650mg,Every 6 hours if fever,Take as directed with water
+67,154,7,Albuterol Inhaler,90mcg,As needed for wheezing,Take as directed with water
+68,156,64,Amoxicillin,500mg,Twice daily,Take as directed with water
+69,157,7,Paracetamol,650mg,Every 6 hours if fever,Take as directed with water
+70,158,56,Albuterol Inhaler,90mcg,As needed for wheezing,Take as directed with water
+71,162,97,Paracetamol,650mg,Every 6 hours if fever,Take as directed with water
+72,167,93,Albuterol Inhaler,90mcg,As needed for wheezing,Take as directed with water
+73,169,5,Omeprazole,20mg,Before breakfast,Take as directed with water
+74,172,85,Ibuprofen,400mg,After food,Take as directed with water
+75,175,89,Ibuprofen,400mg,After food,Take as directed with water
+76,176,16,Omeprazole,20mg,Before breakfast,Take as directed with water
+77,179,18,Ibuprofen,400mg,After food,Take as directed with water
+78,180,7,Amoxicillin,500mg,Twice daily,Take as directed with water
+79,182,97,Metformin,850mg,Once daily with meal,Take as directed with water
+80,187,83,Amoxicillin,500mg,Twice daily,Take as directed with water
+81,189,12,Albuterol Inhaler,90mcg,As needed for wheezing,Take as directed with water
+82,192,89,Amlodipine,5mg,Once daily morning,Take as directed with water
+83,198,8,Ibuprofen,400mg,After food,Take as directed with water

@@ -1,0 +1,66 @@
+{
+  "appointment_completion_rate": {
+    "name": "Appointment Completion Rate",
+    "value": 49.21,
+    "unit": "%",
+    "target": ">= 65.0%",
+    "status": "Attention Needed",
+    "description": "Percentage of scheduled appointments successfully completed."
+  },
+  "no_show_rate": {
+    "name": "Patient No-Show Rate",
+    "value": 17.8,
+    "unit": "%",
+    "target": "< 15.0%",
+    "status": "High",
+    "description": "Percentage of patients missing scheduled appointments without prior cancellation."
+  },
+  "cancellation_rate": {
+    "name": "Appointment Cancellation Rate",
+    "value": 18.32,
+    "unit": "%",
+    "target": "< 12.0%",
+    "status": "Elevated",
+    "description": "Proportion of appointments cancelled prior to consultation."
+  },
+  "avg_consultation_duration": {
+    "name": "Average Consultation Duration",
+    "value": 26.4,
+    "unit": "Minutes",
+    "target": "20.0 - 30.0 mins",
+    "status": "Optimal",
+    "description": "Average duration physicians spend per patient consultation."
+  },
+  "capacity_utilization": {
+    "name": "Doctor Capacity Utilization",
+    "value": 1.33,
+    "unit": "%",
+    "target": "70.0 - 85.0%",
+    "status": "Moderate",
+    "description": "Proportion of total available clinic consultation hours utilized."
+  },
+  "average_revenue_per_visit": {
+    "name": "Average Revenue per Visit (ARPV)",
+    "value": 2748.94,
+    "unit": "\u20b9",
+    "target": ">= \u20b9900.00",
+    "status": "Strong",
+    "description": "Mean revenue generated across completed patient visits."
+  },
+  "billing_collection_efficiency": {
+    "name": "Billing Collection Efficiency",
+    "value": 37.48,
+    "unit": "%",
+    "target": ">= 80.0%",
+    "status": "Lagging",
+    "description": "Percentage of total invoiced clinic revenue successfully collected."
+  },
+  "data_anomaly_rate": {
+    "name": "Operational Data Anomaly Rate",
+    "value": 3.16,
+    "unit": "%",
+    "target": "< 2.0%",
+    "status": "Remediated via Pipeline",
+    "description": "Percentage of operational records exhibiting schema or integrity errors prior to cleaning."
+  }
+}

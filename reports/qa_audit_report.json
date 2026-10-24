@@ -1,0 +1,324 @@
+{
+  "metadata": {
+    "report_title": "AI Clinic Operational Data Quality Assurance & Anomaly Audit",
+    "generated_at": "2026-10-24 23:31:39",
+    "environment": "Operational Prototype / Staging",
+    "total_datasets_audited": 5,
+    "total_anomalies_detected": 26,
+    "critical_severity_count": 5,
+    "warning_severity_count": 4
+  },
+  "python_validation_issues": [
+    {
+      "dataset": "patients",
+      "check_type": "Missing Value",
+      "severity": "Warning",
+      "column": "email",
+      "error_count": 2,
+      "affected_ids": [
+        16,
+        26
+      ],
+      "message": "Found 2 null/empty values in mandatory column 'email'."
+    },
+    {
+      "dataset": "patients",
+      "check_type": "Missing Value",
+      "severity": "Warning",
+      "column": "phone",
+      "error_count": 2,
+      "affected_ids": [
+        31,
+        46
+      ],
+      "message": "Found 2 null/empty values in mandatory column 'phone'."
+    },
+    {
+      "dataset": "prescriptions",
+      "check_type": "Missing Value",
+      "severity": "Critical",
+      "column": "dosage",
+      "error_count": 2,
+      "affected_ids": [
+        3,
+        5
+      ],
+      "message": "Found 2 null/empty values in mandatory column 'dosage'."
+    },
+    {
+      "dataset": "patients",
+      "check_type": "Duplicate Unique Field",
+      "severity": "Warning",
+      "column": "email",
+      "error_count": 6,
+      "affected_ids": [
+        6,
+        9,
+        11,
+        13,
+        21,
+        36
+      ],
+      "message": "Detected 6 patient records sharing duplicate email addresses."
+    },
+    {
+      "dataset": "patients",
+      "check_type": "Domain Inconsistency",
+      "severity": "Critical",
+      "column": "age",
+      "error_count": 2,
+      "affected_ids": [
+        51,
+        76
+      ],
+      "message": "Detected 2 records with impossible age values (<0 or >120)."
+    },
+    {
+      "dataset": "appointments",
+      "check_type": "Logical Inconsistency",
+      "severity": "Warning",
+      "column": "duration_minutes",
+      "error_count": 2,
+      "affected_ids": [
+        34,
+        56
+      ],
+      "message": "Detected 2 completed appointments with zero or negative duration."
+    },
+    {
+      "dataset": "billing",
+      "check_type": "Financial Inconsistency",
+      "severity": "Critical",
+      "column": "amount",
+      "error_count": 2,
+      "affected_ids": [
+        4,
+        18
+      ],
+      "message": "Detected 2 billing records with negative amounts."
+    },
+    {
+      "dataset": "appointments",
+      "check_type": "Broken Foreign Key",
+      "severity": "Critical",
+      "column": "patient_id",
+      "error_count": 2,
+      "affected_ids": [
+        15,
+        29
+      ],
+      "message": "Detected 2 appointments referencing non-existent patient IDs."
+    },
+    {
+      "dataset": "appointments",
+      "check_type": "Broken Foreign Key",
+      "severity": "Critical",
+      "column": "doctor_id",
+      "error_count": 1,
+      "affected_ids": [
+        43
+      ],
+      "message": "Detected 1 appointments referencing non-existent doctor IDs."
+    }
+  ],
+  "sql_anomaly_investigations": {
+    "duplicate_patients": {
+      "name": "Duplicate Patient Records",
+      "sql_file": "check_duplicate_patients.sql",
+      "anomalies": [
+        {
+          "email": "gaurav.das6@example.com",
+          "record_count": 2,
+          "conflicting_patient_ids": "6,11",
+          "conflicting_names": "Gaurav Das,Aditi Chopra"
+        },
+        {
+          "email": "gaurav.yadav13@example.com",
+          "record_count": 2,
+          "conflicting_patient_ids": "13,36",
+          "conflicting_names": "Gaurav Yadav,Ananya Iyer"
+        },
+        {
+          "email": "ishaan.yadav9@example.com",
+          "record_count": 2,
+          "conflicting_patient_ids": "9,21",
+          "conflicting_names": "Ishaan Yadav,Siddharth Bose"
+        }
+      ]
+    },
+    "orphan_appointments": {
+      "name": "Orphan Appointments (Broken Foreign Keys)",
+      "sql_file": "check_orphan_appointments.sql",
+      "anomalies": [
+        {
+          "appointment_id": 15,
+          "appointment_date": "2026-05-10 15:30:00",
+          "status": "completed",
+          "patient_id": 9999,
+          "doctor_id": 6,
+          "anomaly_reason": "Missing Patient Record"
+        },
+        {
+          "appointment_id": 29,
+          "appointment_date": "2026-05-01 10:00:00",
+          "status": "scheduled",
+          "patient_id": 8888,
+          "doctor_id": 7,
+          "anomaly_reason": "Missing Patient Record"
+        },
+        {
+          "appointment_id": 43,
+          "appointment_date": "2026-05-25 15:00:00",
+          "status": "scheduled",
+          "patient_id": 59,
+          "doctor_id": 777,
+          "anomaly_reason": "Missing Doctor Record"
+        }
+      ]
+    },
+    "schedule_conflicts": {
+      "name": "Doctor Schedule Conflicts (Double Booking)",
+      "sql_file": "check_schedule_conflicts.sql",
+      "anomalies": [
+        {
+          "doctor_id": 3,
+          "doctor_name": "Dr. Amit Verma",
+          "appointment_date": "2026-03-10 16:30:00",
+          "first_appointment_id": 19,
+          "first_patient_id": 84,
+          "second_appointment_id": 20,
+          "second_patient_id": 43
+        }
+      ]
+    },
+    "billing_discrepancies": {
+      "name": "Financial & Billing Discrepancies",
+      "sql_file": "check_billing_discrepancies.sql",
+      "anomalies": [
+        {
+          "bill_id": 4,
+          "appointment_id": 4,
+          "patient_id": 42,
+          "amount": -750.0,
+          "payment_status": "insurance_claim",
+          "discrepancy_type": "Negative or Zero Amount Error"
+        },
+        {
+          "bill_id": 18,
+          "appointment_id": 18,
+          "patient_id": 13,
+          "amount": -200.0,
+          "payment_status": "pending",
+          "discrepancy_type": "Negative or Zero Amount Error"
+        },
+        {
+          "bill_id": 23,
+          "appointment_id": 23,
+          "patient_id": 57,
+          "amount": 0.0,
+          "payment_status": "paid",
+          "discrepancy_type": "Negative or Zero Amount Error"
+        },
+        {
+          "bill_id": null,
+          "appointment_id": 9,
+          "patient_id": 91,
+          "amount": 0.0,
+          "payment_status": "unbilled",
+          "discrepancy_type": "Completed Visit Without Billing Record"
+        },
+        {
+          "bill_id": null,
+          "appointment_id": 17,
+          "patient_id": 50,
+          "amount": 0.0,
+          "payment_status": "unbilled",
+          "discrepancy_type": "Completed Visit Without Billing Record"
+        }
+      ]
+    },
+    "allergy_contraindications": {
+      "name": "Medication Allergy Contraindications",
+      "sql_file": "check_allergy_contraindications.sql",
+      "anomalies": [
+        {
+          "prescription_id": 6,
+          "appointment_id": 9,
+          "patient_id": 91,
+          "patient_name": "Ishaan Khan",
+          "documented_allergies": "Penicillin",
+          "prescribed_medication": "Amoxicillin",
+          "dosage": "500mg",
+          "risk_severity": "Critical Contraindication Risk"
+        },
+        {
+          "prescription_id": 24,
+          "appointment_id": 52,
+          "patient_id": 68,
+          "patient_name": "Sanjay Iyer",
+          "documented_allergies": "Penicillin",
+          "prescribed_medication": "Amoxicillin",
+          "dosage": "500mg",
+          "risk_severity": "Critical Contraindication Risk"
+        },
+        {
+          "prescription_id": 26,
+          "appointment_id": 56,
+          "patient_id": 80,
+          "patient_name": "Sanjay Reddy",
+          "documented_allergies": "Penicillin",
+          "prescribed_medication": "Amoxicillin",
+          "dosage": "500mg",
+          "risk_severity": "Critical Contraindication Risk"
+        },
+        {
+          "prescription_id": 77,
+          "appointment_id": 179,
+          "patient_id": 18,
+          "patient_name": "Neha Mehta",
+          "documented_allergies": "Aspirin",
+          "prescribed_medication": "Ibuprofen",
+          "dosage": "400mg",
+          "risk_severity": "Critical Contraindication Risk"
+        },
+        {
+          "prescription_id": 83,
+          "appointment_id": 198,
+          "patient_id": 8,
+          "patient_name": "Kavya Singh",
+          "documented_allergies": "Aspirin",
+          "prescribed_medication": "Ibuprofen",
+          "dosage": "400mg",
+          "risk_severity": "Critical Contraindication Risk"
+        }
+      ]
+    }
+  },
+  "root_cause_analysis": {
+    "duplicate_patients": {
+      "root_cause": "Absence of unique email constraints in the registration form/API, allowing multiple profiles for the same individual.",
+      "impact": "Fragmented patient health records, split medical histories, and inaccurate patient counts.",
+      "recommendation": "Enforce unique database index on patient email and add client-side debounce verification."
+    },
+    "orphan_appointments": {
+      "root_cause": "Hard-deletions of patient/staff records in database without foreign key CASCADE or RESTRICT rules.",
+      "impact": "Ghost bookings in schedule, doctor calendar desynchronization, and broken relational queries.",
+      "recommendation": "Adopt soft-deletion pattern (is_active = FALSE) and enforce PostgreSQL FOREIGN KEY constraints."
+    },
+    "schedule_conflicts": {
+      "root_cause": "Booking API endpoint lacks transactional isolation (serializable transactions) and optimistic locking during appointment creation.",
+      "impact": "Physician double-booking, extended patient wait times, and operational chaos.",
+      "recommendation": "Add a unique composite constraint (doctor_id, appointment_date) or wrap booking in a database lock."
+    },
+    "billing_discrepancies": {
+      "root_cause": "Manual billing input allows negative values, and consultation completion is not automatically linked to invoice generation.",
+      "impact": "Revenue leakage, uncollected visit fees, and bookkeeping reconciliation errors.",
+      "recommendation": "Implement automated invoice generation upon appointment status change to 'completed' and add non-negative check constraints."
+    },
+    "allergy_contraindications": {
+      "root_cause": "Doctor prescription interface lacks an automated pre-flight clinical allergy cross-checking service.",
+      "impact": "Severe patient clinical risk (anaphylaxis / adverse drug reaction).",
+      "recommendation": "Integrate real-time allergy cross-reference alerts prior to prescription submission."
+    }
+  }
+}

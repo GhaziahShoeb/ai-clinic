@@ -1,5 +1,5 @@
-from fastapi import APIRouter, Depends, HTTPException
-from fastapi.security import OAuth2PasswordRequestForm
+from fastapi import APIRouter, Depends, HTTPException, Body, Request
+
 from sqlalchemy.orm import Session
 from database import get_db
 from schemas.user import UserCreate, UserOut
@@ -22,16 +22,38 @@ def register(user_data: UserCreate, db: Session = Depends(get_db)):
         raise HTTPException(status_code=400, detail="Email already registered")
     return create_user(db, user_data)
 
-# POST /auth/login — supports both JSON and OAuth2 form
+# POST /auth/login — supports OAuth2 form (unchanged)
 @router.post("/login")
-def login(
-    form_data: OAuth2PasswordRequestForm = Depends(),
+async def login(
+    request: Request,
     db: Session = Depends(get_db)
 ):
-    result = login_user(db, form_data.username, form_data.password)
+    """Accepts either JSON payload or form‑encoded body.
+
+    * JSON: {"email": "...", "password": "..."}
+    * Form‑encoded (OAuth2 style): username=...&password=...
+    """
+    content_type = request.headers.get("content-type", "")
+    if "application/json" in content_type:
+        body = await request.json()
+        email = body.get("email")
+        pwd = body.get("password")
+    elif "application/x-www-form-urlencoded" in content_type:
+        form = await request.form()
+        email = form.get("username")
+        pwd = form.get("password")
+    else:
+        raise HTTPException(
+            status_code=415,
+            detail="Unsupported Content-Type. Use JSON or form data."
+        )
+    if not email or not pwd:
+        raise HTTPException(status_code=401, detail="Invalid email or password")
+    result = login_user(db, email, pwd)
     if not result:
         raise HTTPException(status_code=401, detail="Invalid email or password")
     return result
+
 
 @router.get("/me",response_model=UserOut)
 def get_me(current_user: User =Depends(get_current_user)):

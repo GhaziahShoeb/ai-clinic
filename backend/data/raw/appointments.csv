@@ -1,0 +1,201 @@
+appointment_id,patient_id,doctor_id,appointment_date,status,duration_minutes,reason
+1,4,2,2026-03-30 09:30:00,no_show,0,Routine Checkup
+2,98,13,2026-03-23 16:30:00,completed,20,Blood Pressure Monitoring
+3,82,14,2026-05-02 10:30:00,completed,45,Skin Rash
+4,42,11,2026-03-14 11:30:00,scheduled,0,Prescription Refill
+5,37,11,2026-04-21 09:30:00,completed,30,Joint Pain
+6,42,2,2026-04-21 09:30:00,scheduled,0,Routine Checkup
+7,25,9,2026-04-16 16:30:00,completed,20,Joint Pain
+8,71,3,2026-04-06 16:30:00,completed,15,Fever and Cold
+9,91,3,2026-04-09 09:30:00,completed,20,Follow-up
+10,60,2,2026-05-22 11:30:00,cancelled,0,Joint Pain
+11,66,12,2026-04-04 15:30:00,scheduled,0,Fever and Cold
+12,59,9,2026-03-19 15:00:00,no_show,0,Chest Discomfort
+13,9,5,2026-04-23 14:30:00,completed,30,Joint Pain
+14,76,10,2026-05-24 16:00:00,scheduled,0,Prescription Refill
+15,9999,6,2026-05-10 15:30:00,completed,20,Fever and Cold
+16,74,7,2026-03-30 15:00:00,completed,45,Blood Pressure Monitoring
+17,50,11,2026-05-23 11:30:00,completed,20,Skin Rash
+18,13,14,2026-04-26 10:30:00,completed,20,Blood Pressure Monitoring
+19,84,3,2026-03-10 16:30:00,scheduled,45,Follow-up
+20,43,3,2026-03-10 16:30:00,scheduled,0,Prescription Refill
+21,70,1,2026-05-19 10:00:00,cancelled,0,Joint Pain
+22,30,12,2026-03-12 15:00:00,cancelled,0,Follow-up
+23,57,3,2026-05-28 13:00:00,completed,30,Routine Checkup
+24,38,6,2026-04-17 15:00:00,completed,45,Chest Discomfort
+25,22,3,2026-03-11 15:00:00,scheduled,0,Chest Discomfort
+26,30,8,2026-05-21 13:30:00,completed,15,Prescription Refill
+27,37,11,2026-05-09 11:00:00,scheduled,0,Skin Rash
+28,76,5,2026-05-21 15:30:00,scheduled,0,Joint Pain
+29,8888,7,2026-05-01 10:00:00,scheduled,0,Skin Rash
+30,74,5,2026-05-29 13:00:00,cancelled,0,Blood Pressure Monitoring
+31,36,1,2026-05-12 09:30:00,completed,20,Skin Rash
+32,29,11,2026-03-25 13:00:00,cancelled,0,Follow-up
+33,81,11,2026-03-06 13:30:00,completed,30,Chest Discomfort
+34,12,15,2026-04-07 14:30:00,completed,0,Chest Discomfort
+35,70,15,2026-04-16 13:00:00,completed,45,Joint Pain
+36,96,14,2026-04-13 10:30:00,completed,20,Fever and Cold
+37,87,12,2026-05-26 15:30:00,completed,45,Routine Checkup
+38,34,9,2026-03-16 16:30:00,cancelled,0,Joint Pain
+39,75,7,2026-05-21 14:00:00,cancelled,0,Fever and Cold
+40,61,1,2026-05-19 14:00:00,cancelled,0,Follow-up
+41,82,14,2026-04-29 13:30:00,completed,20,Routine Checkup
+42,5,5,2026-05-03 10:00:00,completed,20,Blood Pressure Monitoring
+43,59,777,2026-05-25 15:00:00,scheduled,0,Follow-up
+44,63,10,2026-04-22 13:00:00,cancelled,0,Skin Rash
+45,28,8,2026-04-26 12:30:00,completed,30,Skin Rash
+46,8,7,2026-04-05 12:00:00,scheduled,0,Follow-up
+47,85,4,2026-05-22 09:00:00,completed,20,Chest Discomfort
+48,73,4,2026-03-09 12:00:00,completed,30,Chest Discomfort
+49,77,1,2026-04-05 11:00:00,no_show,0,Joint Pain
+50,23,2,2026-05-24 09:00:00,completed,30,Fever and Cold
+51,76,6,2026-03-03 11:30:00,completed,20,Blood Pressure Monitoring
+52,68,2,2026-03-09 16:30:00,completed,15,Prescription Refill
+53,65,4,2026-05-18 09:30:00,scheduled,0,Routine Checkup
+54,8,8,2026-04-21 15:00:00,scheduled,0,Prescription Refill
+55,10,15,2026-03-11 14:00:00,completed,20,Joint Pain
+56,80,11,2026-05-14 14:30:00,completed,-15,Joint Pain
+57,59,9,2026-05-17 15:00:00,cancelled,0,Follow-up
+58,84,11,2026-05-10 12:30:00,scheduled,0,Fever and Cold
+59,53,6,2026-04-28 15:30:00,cancelled,0,Follow-up
+60,41,7,2026-04-10 13:30:00,completed,45,Follow-up
+61,12,14,2026-03-11 10:30:00,completed,30,Chest Discomfort
+62,72,1,2026-05-15 14:00:00,scheduled,0,Skin Rash
+63,86,13,2026-04-24 09:30:00,no_show,0,Joint Pain
+64,46,2,2026-05-13 12:00:00,cancelled,0,Prescription Refill
+65,29,14,2026-03-14 14:30:00,completed,30,Fever and Cold
+66,55,14,2026-05-11 09:30:00,completed,20,Joint Pain
+67,90,13,2026-04-09 14:30:00,completed,20,Chest Discomfort
+68,73,11,2026-04-21 10:00:00,cancelled,0,Routine Checkup
+69,12,12,2026-05-07 12:30:00,scheduled,0,Prescription Refill
+70,44,3,2026-04-17 13:30:00,no_show,0,Follow-up
+71,7,3,2026-03-21 09:00:00,completed,45,Blood Pressure Monitoring
+72,63,10,2026-04-26 15:30:00,completed,15,Skin Rash
+73,56,2,2026-04-06 16:30:00,completed,20,Blood Pressure Monitoring
+74,77,1,2026-03-01 12:30:00,completed,20,Joint Pain
+75,38,6,2026-03-16 09:30:00,cancelled,0,Blood Pressure Monitoring
+76,23,3,2026-04-18 12:30:00,completed,45,Routine Checkup
+77,56,1,2026-04-28 10:30:00,no_show,0,Blood Pressure Monitoring
+78,74,7,2026-05-30 15:30:00,completed,45,Routine Checkup
+79,42,3,2026-05-19 16:30:00,completed,45,Follow-up
+80,32,7,2026-05-15 15:00:00,scheduled,0,Joint Pain
+81,96,6,2026-03-29 14:00:00,completed,15,Fever and Cold
+82,100,6,2026-04-14 11:00:00,completed,20,Joint Pain
+83,26,3,2026-05-17 11:00:00,completed,45,Prescription Refill
+84,97,10,2026-05-14 16:30:00,cancelled,0,Skin Rash
+85,20,8,2026-03-09 16:30:00,cancelled,0,Joint Pain
+86,36,10,2026-03-08 14:00:00,completed,45,Prescription Refill
+87,5,1,2026-04-17 13:00:00,cancelled,0,Follow-up
+88,79,10,2026-05-04 15:30:00,no_show,0,Routine Checkup
+89,58,15,2026-05-13 12:30:00,no_show,0,Prescription Refill
+90,65,3,2026-03-08 16:00:00,completed,15,Chest Discomfort
+91,6,4,2026-05-30 16:30:00,no_show,0,Chest Discomfort
+92,47,6,2026-04-06 15:30:00,completed,15,Skin Rash
+93,9,6,2026-03-13 15:30:00,completed,20,Skin Rash
+94,11,10,2026-05-24 11:30:00,completed,45,Chest Discomfort
+95,77,12,2026-03-11 13:30:00,cancelled,0,Skin Rash
+96,17,11,2026-05-29 10:30:00,no_show,0,Skin Rash
+97,3,6,2026-04-09 11:00:00,completed,45,Fever and Cold
+98,29,3,2026-03-20 10:30:00,completed,15,Skin Rash
+99,99,10,2026-03-17 15:00:00,completed,20,Chest Discomfort
+100,93,8,2026-03-06 15:30:00,cancelled,0,Fever and Cold
+101,57,10,2026-04-06 16:00:00,no_show,0,Fever and Cold
+102,40,13,2026-04-30 12:30:00,cancelled,0,Prescription Refill
+103,60,13,2026-04-06 15:30:00,completed,20,Chest Discomfort
+104,33,1,2026-05-22 16:30:00,no_show,0,Follow-up
+105,92,14,2026-05-06 10:30:00,completed,20,Joint Pain
+106,58,15,2026-05-05 11:30:00,completed,20,Prescription Refill
+107,45,15,2026-03-04 15:00:00,scheduled,0,Skin Rash
+108,31,7,2026-03-11 14:00:00,completed,30,Follow-up
+109,92,11,2026-04-12 11:00:00,completed,30,Prescription Refill
+110,90,14,2026-03-18 16:30:00,no_show,0,Routine Checkup
+111,11,1,2026-04-02 12:00:00,no_show,0,Blood Pressure Monitoring
+112,15,13,2026-04-06 12:30:00,completed,15,Fever and Cold
+113,54,11,2026-05-19 16:00:00,completed,45,Routine Checkup
+114,81,9,2026-05-13 12:00:00,completed,45,Routine Checkup
+115,79,6,2026-03-31 15:00:00,cancelled,0,Follow-up
+116,68,6,2026-03-09 09:30:00,scheduled,0,Routine Checkup
+117,82,7,2026-04-17 13:00:00,completed,15,Skin Rash
+118,31,12,2026-05-24 10:30:00,completed,15,Skin Rash
+119,70,6,2026-05-22 11:30:00,cancelled,0,Prescription Refill
+120,81,3,2026-03-18 10:30:00,completed,30,Fever and Cold
+121,6,13,2026-03-26 09:30:00,completed,45,Prescription Refill
+122,33,1,2026-05-22 12:30:00,completed,15,Skin Rash
+123,35,2,2026-04-17 15:30:00,cancelled,0,Prescription Refill
+124,50,6,2026-03-24 16:30:00,completed,30,Follow-up
+125,94,7,2026-03-11 15:00:00,no_show,0,Joint Pain
+126,42,2,2026-03-11 14:30:00,completed,45,Blood Pressure Monitoring
+127,22,12,2026-04-26 14:30:00,completed,30,Blood Pressure Monitoring
+128,36,11,2026-03-08 10:30:00,completed,20,Routine Checkup
+129,19,14,2026-05-17 16:00:00,completed,15,Fever and Cold
+130,100,11,2026-04-16 14:30:00,no_show,0,Routine Checkup
+131,78,3,2026-05-26 16:30:00,completed,45,Follow-up
+132,74,3,2026-05-07 14:30:00,completed,30,Fever and Cold
+133,15,1,2026-03-24 16:30:00,no_show,0,Follow-up
+134,34,13,2026-04-03 16:00:00,no_show,0,Joint Pain
+135,89,15,2026-05-02 12:00:00,completed,15,Prescription Refill
+136,23,15,2026-04-26 10:30:00,cancelled,0,Skin Rash
+137,91,2,2026-05-10 13:30:00,completed,20,Skin Rash
+138,66,4,2026-03-16 12:00:00,completed,45,Routine Checkup
+139,47,9,2026-05-13 14:30:00,no_show,0,Chest Discomfort
+140,79,15,2026-03-12 10:30:00,scheduled,0,Prescription Refill
+141,68,7,2026-04-22 10:00:00,completed,15,Prescription Refill
+142,60,11,2026-05-06 14:00:00,no_show,0,Chest Discomfort
+143,99,3,2026-04-25 09:00:00,no_show,0,Chest Discomfort
+144,39,3,2026-03-21 14:00:00,completed,30,Follow-up
+145,33,4,2026-05-21 13:00:00,cancelled,0,Joint Pain
+146,79,9,2026-03-12 11:00:00,completed,30,Routine Checkup
+147,4,2,2026-03-06 13:00:00,no_show,0,Blood Pressure Monitoring
+148,80,11,2026-03-04 16:30:00,cancelled,0,Joint Pain
+149,62,4,2026-05-27 15:30:00,scheduled,0,Follow-up
+150,89,1,2026-03-21 16:30:00,scheduled,0,Prescription Refill
+151,27,6,2026-05-17 11:30:00,cancelled,0,Skin Rash
+152,94,14,2026-04-14 15:00:00,completed,15,Skin Rash
+153,31,8,2026-03-16 13:30:00,completed,20,Follow-up
+154,7,5,2026-04-19 15:00:00,completed,30,Skin Rash
+155,25,13,2026-03-21 16:30:00,scheduled,0,Joint Pain
+156,64,1,2026-03-12 15:30:00,completed,20,Skin Rash
+157,7,1,2026-04-06 16:30:00,completed,15,Follow-up
+158,56,3,2026-04-03 14:30:00,completed,15,Blood Pressure Monitoring
+159,7,10,2026-05-11 12:30:00,no_show,0,Joint Pain
+160,10,7,2026-05-04 16:30:00,no_show,0,Follow-up
+161,17,2,2026-04-20 14:30:00,no_show,0,Skin Rash
+162,97,3,2026-03-26 15:00:00,completed,15,Chest Discomfort
+163,92,6,2026-04-30 16:00:00,no_show,0,Chest Discomfort
+164,42,15,2026-05-18 14:00:00,scheduled,0,Joint Pain
+165,76,6,2026-05-04 16:30:00,scheduled,0,Routine Checkup
+166,48,6,2026-05-26 10:30:00,no_show,0,Joint Pain
+167,93,14,2026-05-28 09:30:00,completed,20,Routine Checkup
+168,75,8,2026-03-22 15:00:00,cancelled,0,Fever and Cold
+169,5,10,2026-05-29 10:00:00,completed,45,Skin Rash
+170,54,3,2026-04-22 12:30:00,no_show,0,Prescription Refill
+171,95,12,2026-03-08 11:00:00,no_show,0,Skin Rash
+172,85,8,2026-05-07 15:30:00,completed,45,Skin Rash
+173,70,6,2026-05-26 13:30:00,completed,20,Joint Pain
+174,72,5,2026-03-29 13:30:00,cancelled,0,Fever and Cold
+175,89,12,2026-05-02 14:30:00,completed,30,Joint Pain
+176,16,10,2026-05-26 15:30:00,completed,20,Joint Pain
+177,6,5,2026-03-11 14:30:00,cancelled,0,Joint Pain
+178,96,8,2026-03-28 12:30:00,no_show,0,Joint Pain
+179,18,2,2026-05-18 12:00:00,completed,20,Fever and Cold
+180,7,2,2026-04-22 14:30:00,completed,20,Routine Checkup
+181,71,15,2026-03-21 15:30:00,scheduled,0,Fever and Cold
+182,97,5,2026-04-11 13:00:00,completed,20,Routine Checkup
+183,23,7,2026-03-23 09:30:00,scheduled,0,Chest Discomfort
+184,96,14,2026-04-07 09:00:00,completed,15,Skin Rash
+185,37,8,2026-05-22 16:00:00,no_show,0,Prescription Refill
+186,35,4,2026-03-15 14:00:00,cancelled,0,Prescription Refill
+187,83,5,2026-03-24 09:30:00,completed,20,Chest Discomfort
+188,79,14,2026-05-21 15:30:00,no_show,0,Skin Rash
+189,12,7,2026-05-25 10:00:00,completed,45,Skin Rash
+190,32,1,2026-04-03 15:00:00,scheduled,0,Joint Pain
+191,43,5,2026-05-14 09:30:00,cancelled,0,Skin Rash
+192,89,4,2026-03-08 10:30:00,completed,20,Blood Pressure Monitoring
+193,88,9,2026-05-30 13:00:00,cancelled,0,Joint Pain
+194,48,10,2026-03-29 12:00:00,scheduled,0,Chest Discomfort
+195,59,12,2026-05-17 14:30:00,cancelled,0,Prescription Refill
+196,97,9,2026-05-25 12:00:00,cancelled,0,Follow-up
+197,68,8,2026-05-07 14:00:00,no_show,0,Follow-up
+198,8,14,2026-05-10 12:00:00,completed,30,Prescription Refill
+199,15,11,2026-03-27 16:00:00,no_show,0,Prescription Refill
+200,8,8,2026-03-17 15:30:00,no_show,0,Routine Checkup

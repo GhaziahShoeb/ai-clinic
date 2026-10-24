@@ -1,0 +1,97 @@
+patient_id,name,age,gender,email,phone,blood_type,allergies,conditions,registered_date
+1,Tanvi Singh,19,Other,tanvi.singh1@example.com,+91-9846913810,B-,Peanuts,Asthma,2026-01-27
+2,Siddharth Gupta,55,Female,siddharth.gupta2@example.com,+91-9814265799,A+,Sulfa Drugs,Migraine,2026-03-01
+3,Priya Sharma,53,Male,priya.sharma3@example.com,+91-9897226012,O+,Peanuts,Hyperlipidemia,2026-05-31
+4,Manish Sharma,66,Male,manish.sharma4@example.com,+91-9866722344,AB-,None,Asthma,2026-02-25
+5,Pooja Singh,23,Female,pooja.singh5@example.com,+91-9822981052,AB-,None,None,2026-01-12
+6,Gaurav Das,52,Male,gaurav.das6@example.com,+91-9860806024,A-,None,None,2026-06-10
+7,Karan Reddy,54,Male,karan.reddy7@example.com,+91-9819335534,A+,Peanuts,None,2026-01-21
+8,Kavya Singh,42,Female,kavya.singh8@example.com,+91-9870855700,AB-,Aspirin,None,2026-04-01
+9,Ishaan Yadav,62,Other,ishaan.yadav9@example.com,+91-9896977837,A-,Aspirin,GERD,2026-03-04
+10,Divya Das,42,Female,divya.das10@example.com,+91-9895899313,B-,None,Hypertension,2026-02-28
+12,Vikram Nair,74,Other,vikram.nair12@example.com,+91-9871586053,B+,None,Asthma,2026-03-05
+13,Gaurav Yadav,65,Other,gaurav.yadav13@example.com,+91-9867503414,O+,None,Migraine,2026-02-05
+14,Priya Bose,23,Male,priya.bose14@example.com,+91-9824716857,B+,Aspirin,None,2026-06-02
+15,Ananya Nair,42,Other,ananya.nair15@example.com,+91-9872820592,AB+,None,Hypertension,2026-06-24
+16,Gaurav Singh,61,Other,unregistered@clinic.local,+91-9845812670,AB-,Sulfa Drugs,None,2026-04-22
+17,Divya Das,18,Other,divya.das17@example.com,+91-9845351479,B+,None,Type 2 Diabetes,2026-06-10
+18,Neha Mehta,56,Male,neha.mehta18@example.com,+91-9830513739,AB-,Aspirin,GERD,2026-05-16
+19,Aarav Chopra,49,Male,aarav.chopra19@example.com,+91-9825014631,AB-,None,Migraine,2026-01-15
+20,Kavya Gupta,23,Other,kavya.gupta20@example.com,+91-9875228535,A-,None,Asthma,2026-02-02
+22,Aditya Mishra,63,Female,aditya.mishra22@example.com,+91-9863551839,AB-,Latex,GERD,2026-04-26
+23,Arjun Joshi,32,Male,arjun.joshi23@example.com,+91-9855377076,A+,None,Migraine,2026-05-31
+24,Kavya Sharma,22,Other,kavya.sharma24@example.com,+91-9894705205,A+,Peanuts,Type 2 Diabetes,2026-01-09
+25,Pooja Gupta,50,Male,pooja.gupta25@example.com,+91-9847376585,O-,Peanuts,GERD,2026-02-03
+27,Sanjay Reddy,45,Female,sanjay.reddy27@example.com,+91-9872682989,A+,Sulfa Drugs,Hypertension,2026-04-14
+28,Gaurav Chopra,69,Male,gaurav.chopra28@example.com,+91-9843374088,B-,Peanuts,GERD,2026-04-25
+29,Deepak Iyer,29,Female,deepak.iyer29@example.com,+91-9872092888,B-,Sulfa Drugs,Hyperlipidemia,2026-05-21
+30,Arjun Verma,59,Other,arjun.verma30@example.com,+91-9811980765,A-,Peanuts,Asthma,2026-04-15
+31,Vikram Bose,31,Female,vikram.bose31@example.com,+91-0000000000,B+,None,Hypertension,2026-04-10
+32,Manish Das,36,Female,manish.das32@example.com,+91-9884593961,O-,Aspirin,Migraine,2026-03-17
+33,Ishaan Verma,55,Other,ishaan.verma33@example.com,+91-9882772208,A+,None,Hypertension,2026-01-13
+34,Meera Bose,50,Other,meera.bose34@example.com,+91-9831130263,A+,None,Type 2 Diabetes,2026-02-17
+35,Ananya Gupta,61,Male,ananya.gupta35@example.com,+91-9864193837,A-,Peanuts,Hypertension,2026-06-08
+37,Riya Chopra,33,Female,riya.chopra37@example.com,+91-9863121477,B+,None,Hyperlipidemia,2026-03-22
+38,Ananya Sharma,47,Other,ananya.sharma38@example.com,+91-9885563727,A-,Sulfa Drugs,GERD,2026-02-24
+39,Priya Yadav,26,Female,priya.yadav39@example.com,+91-9819233013,B-,None,None,2026-02-10
+40,Sneha Khan,57,Other,sneha.khan40@example.com,+91-9880993218,A+,None,None,2026-06-19
+41,Arjun Patel,34,Male,arjun.patel41@example.com,+91-9824366125,B+,None,None,2026-06-04
+42,Ishaan Chopra,31,Other,ishaan.chopra42@example.com,+91-9895125977,AB+,None,Hyperlipidemia,2026-03-06
+43,Aditi Gupta,58,Female,aditi.gupta43@example.com,+91-9847135391,A+,Penicillin,None,2026-02-03
+44,Tanvi Yadav,28,Other,tanvi.yadav44@example.com,+91-9869302158,O+,None,Hypertension,2026-01-29
+45,Ananya Patel,52,Male,ananya.patel45@example.com,+91-9859555330,B+,None,Asthma,2026-01-11
+46,Neha Reddy,75,Male,neha.reddy46@example.com,+91-0000000000,B-,Peanuts,Type 2 Diabetes,2026-04-01
+47,Aditya Iyer,57,Other,aditya.iyer47@example.com,+91-9830743797,B-,Aspirin,Asthma,2026-04-16
+48,Aarav Kumar,65,Female,aarav.kumar48@example.com,+91-9865259205,B-,None,Asthma,2026-06-29
+49,Arjun Nair,73,Male,arjun.nair49@example.com,+91-9873174945,B-,Peanuts,Hyperlipidemia,2026-03-31
+50,Neha Joshi,32,Male,neha.joshi50@example.com,+91-9898588154,B-,None,None,2026-03-13
+51,Ananya Yadav,45,Other,ananya.yadav51@example.com,+91-9878371272,O+,None,None,2026-01-08
+52,Arjun Yadav,29,Other,arjun.yadav52@example.com,+91-9845630292,A+,Sulfa Drugs,None,2026-03-30
+53,Gaurav Chopra,45,Other,gaurav.chopra53@example.com,+91-9878642041,A-,None,Migraine,2026-03-07
+54,Aditi Iyer,18,Other,aditi.iyer54@example.com,+91-9882269803,B-,None,None,2026-01-18
+55,Siddharth Chopra,57,Female,siddharth.chopra55@example.com,+91-9899038359,A-,None,GERD,2026-03-21
+56,Siddharth Iyer,38,Female,siddharth.iyer56@example.com,+91-9849682169,B+,Peanuts,None,2026-06-20
+57,Rohan Kumar,57,Other,rohan.kumar57@example.com,+91-9850392808,O+,None,Hypertension,2026-03-19
+58,Neha Mishra,45,Other,neha.mishra58@example.com,+91-9891424737,AB-,Latex,Hyperlipidemia,2026-04-24
+59,Siddharth Mishra,50,Female,siddharth.mishra59@example.com,+91-9832775593,A-,None,GERD,2026-06-19
+60,Tanvi Chopra,23,Male,tanvi.chopra60@example.com,+91-9851663795,B-,Peanuts,Asthma,2026-01-07
+61,Aditi Joshi,48,Other,aditi.joshi61@example.com,+91-9819774839,O-,None,Migraine,2026-06-28
+62,Rohan Bose,43,Male,rohan.bose62@example.com,+91-9829806690,A+,Sulfa Drugs,None,2026-02-26
+63,Divya Mehta,47,Male,divya.mehta63@example.com,+91-9884813739,B-,Sulfa Drugs,Hyperlipidemia,2026-02-04
+64,Sneha Mehta,53,Other,sneha.mehta64@example.com,+91-9852587010,O-,None,None,2026-05-21
+65,Sneha Kumar,65,Female,sneha.kumar65@example.com,+91-9870407340,AB+,Peanuts,None,2026-05-14
+66,Vikram Joshi,35,Female,vikram.joshi66@example.com,+91-9820399639,AB+,Peanuts,None,2026-03-27
+67,Pooja Gupta,26,Male,pooja.gupta67@example.com,+91-9841039390,O+,Aspirin,Migraine,2026-01-17
+68,Sanjay Iyer,39,Other,sanjay.iyer68@example.com,+91-9872535301,O+,Penicillin,Migraine,2026-04-18
+69,Rohan Sharma,72,Other,rohan.sharma69@example.com,+91-9861053877,O-,Penicillin,None,2026-03-18
+70,Rohan Iyer,52,Other,rohan.iyer70@example.com,+91-9883300637,B-,Latex,Migraine,2026-03-11
+71,Sanjay Bose,19,Female,sanjay.bose71@example.com,+91-9855114543,O+,Aspirin,Hyperlipidemia,2026-02-02
+72,Karan Sharma,76,Female,karan.sharma72@example.com,+91-9889442503,A+,Sulfa Drugs,None,2026-02-04
+73,Sneha Kumar,21,Female,sneha.kumar73@example.com,+91-9860882459,AB-,Peanuts,Hyperlipidemia,2026-03-25
+74,Pooja Nair,35,Female,pooja.nair74@example.com,+91-9843859311,A-,Latex,Hypertension,2026-05-19
+75,Aditi Reddy,32,Other,aditi.reddy75@example.com,+91-9819209801,A+,Penicillin,Migraine,2026-02-21
+76,Aarav Patel,45,Male,aarav.patel76@example.com,+91-9873560289,A-,Peanuts,Hyperlipidemia,2026-06-29
+77,Manish Reddy,28,Other,manish.reddy77@example.com,+91-9891503378,A-,Aspirin,None,2026-01-28
+78,Meera Sharma,77,Female,meera.sharma78@example.com,+91-9887282128,O+,None,Migraine,2026-01-20
+79,Meera Joshi,24,Other,meera.joshi79@example.com,+91-9850477742,A-,Penicillin,None,2026-05-17
+80,Sanjay Reddy,22,Other,sanjay.reddy80@example.com,+91-9896911784,AB-,Penicillin,None,2026-05-06
+81,Arjun Iyer,41,Other,arjun.iyer81@example.com,+91-9871705170,B+,None,Asthma,2026-05-14
+82,Tanvi Yadav,57,Other,tanvi.yadav82@example.com,+91-9874893936,O-,None,None,2026-03-24
+83,Kavya Gupta,35,Female,kavya.gupta83@example.com,+91-9842730796,O-,None,None,2026-01-08
+84,Vikram Chopra,29,Female,vikram.chopra84@example.com,+91-9838470244,AB-,None,None,2026-03-13
+85,Karan Yadav,53,Male,karan.yadav85@example.com,+91-9879340535,B-,Sulfa Drugs,Migraine,2026-04-15
+86,Vikram Joshi,62,Female,vikram.joshi86@example.com,+91-9896691619,O-,Latex,Hypertension,2026-01-24
+87,Neha Joshi,43,Other,neha.joshi87@example.com,+91-9842655866,AB+,None,Hyperlipidemia,2026-05-22
+88,Priya Reddy,45,Other,priya.reddy88@example.com,+91-9883871890,AB-,None,Hyperlipidemia,2026-03-11
+89,Neha Yadav,32,Male,neha.yadav89@example.com,+91-9835848226,AB-,Sulfa Drugs,GERD,2026-06-26
+90,Divya Mishra,31,Other,divya.mishra90@example.com,+91-9874988034,AB+,None,None,2026-01-26
+91,Ishaan Khan,32,Female,ishaan.khan91@example.com,+91-9834084236,AB+,Penicillin,GERD,2026-02-02
+92,Manish Verma,21,Other,manish.verma92@example.com,+91-9849209916,B+,Latex,Type 2 Diabetes,2026-01-04
+93,Meera Khan,48,Female,meera.khan93@example.com,+91-9869118721,AB-,Aspirin,Hypertension,2026-03-06
+94,Vikram Singh,70,Male,vikram.singh94@example.com,+91-9863782042,O-,Sulfa Drugs,Hypertension,2026-02-08
+95,Deepak Khan,23,Male,deepak.khan95@example.com,+91-9825898299,O+,Peanuts,GERD,2026-04-08
+96,Sneha Das,37,Other,sneha.das96@example.com,+91-9867556566,AB+,Penicillin,Type 2 Diabetes,2026-02-23
+97,Tanvi Mishra,34,Other,tanvi.mishra97@example.com,+91-9820896797,B+,Peanuts,Asthma,2026-05-22
+98,Ananya Kumar,18,Female,ananya.kumar98@example.com,+91-9870465583,O-,None,Hypertension,2026-03-01
+99,Neha Khan,62,Female,neha.khan99@example.com,+91-9819553585,B-,None,Migraine,2026-04-19
+100,Arjun Joshi,59,Male,arjun.joshi100@example.com,+91-9845652586,B+,Sulfa Drugs,Hypertension,2026-02-12

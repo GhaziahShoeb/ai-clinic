@@ -1,0 +1,6 @@
+department,total_appointments,completed_appointments,no_show_appointments,total_revenue,completion_rate_pct
+Cardiology,37,18,3,48800.0,48.6
+Dermatology,35,23,5,50250.0,65.7
+General Medicine,48,25,10,66650.0,52.1
+Orthopedics,37,14,8,42250.0,37.8
+Pediatrics,34,14,8,50450.0,41.2

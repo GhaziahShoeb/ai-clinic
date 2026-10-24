@@ -1,0 +1,9 @@
+kpi_id,kpi_name,value,unit,target,status,description
+appointment_completion_rate,Appointment Completion Rate,49.21,%,>= 65.0%,Attention Needed,Percentage of scheduled appointments successfully completed.
+no_show_rate,Patient No-Show Rate,17.8,%,< 15.0%,High,Percentage of patients missing scheduled appointments without prior cancellation.
+cancellation_rate,Appointment Cancellation Rate,18.32,%,< 12.0%,Elevated,Proportion of appointments cancelled prior to consultation.
+avg_consultation_duration,Average Consultation Duration,26.4,Minutes,20.0 - 30.0 mins,Optimal,Average duration physicians spend per patient consultation.
+capacity_utilization,Doctor Capacity Utilization,1.33,%,70.0 - 85.0%,Moderate,Proportion of total available clinic consultation hours utilized.
+average_revenue_per_visit,Average Revenue per Visit (ARPV),2748.94,₹,>= ₹900.00,Strong,Mean revenue generated across completed patient visits.
+billing_collection_efficiency,Billing Collection Efficiency,37.48,%,>= 80.0%,Lagging,Percentage of total invoiced clinic revenue successfully collected.
+data_anomaly_rate,Operational Data Anomaly Rate,3.16,%,< 2.0%,Remediated via Pipeline,Percentage of operational records exhibiting schema or integrity errors prior to cleaning.
